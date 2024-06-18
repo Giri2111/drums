@@ -4,7 +4,7 @@ for(var i=0;i<n;i++)
 document.querySelectorAll(".drum")[i].addEventListener("click",
     function(){
       var inhtml=this.innerHTML;
-         buttonanimi(inhtml);
+      buttonanimi(inhtml);
       switch (inhtml) {
         case "w":
             var a=new Audio("./sounds/tom-1.mp3");
@@ -36,17 +36,17 @@ document.querySelectorAll(".drum")[i].addEventListener("click",
                     var a=new Audio("./sounds/kick-bass.mp3");
                     a.play();
                     break;
-              
+       
           
                      
       }
-
+    
     });
     }
-document.addEventListener("keypress",function(event)
+document.addEventListener("keypress",function(evet)
 {
-   var d=event.key;
-     buttonanimi(d);
+   var d=evet.key;
+   buttonanimi(d);
    switch (d) {
     case "w":
         var a=new Audio("./sounds/tom-1.mp3");
@@ -80,6 +80,7 @@ document.addEventListener("keypress",function(event)
                 break;
 }
 });
+
 function buttonanimi(letter)
 {
    var let=document.querySelector("."+letter);
